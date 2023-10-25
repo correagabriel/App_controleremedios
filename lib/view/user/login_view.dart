@@ -26,8 +26,17 @@
                   margin: EdgeInsets.fromLTRB(0, 250, 0, 230),
                   child: Column(
                     children: [
-                      TextField(
+                      TextFormField(
                             maxLength: 11,
+                            validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Por favor, insira seu email.';
+                            }
+                            if(value.length <11){
+                              return "CPF Invalido";
+                            }
+                            return null;
+                            },
                             decoration: InputDecoration(
                             fillColor: Colors.white,
                             filled: true,
@@ -50,8 +59,17 @@
                         height: 15,
                       ),
 
-                      TextField(
+                      TextFormField(
                             maxLength: 8,
+                            validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Por favor, insira seu email.';
+                            }
+                            if(value.length <8){
+                              return "Senha muita curta";
+                            }
+                            return null;
+                            },
                             decoration: InputDecoration(
                             fillColor: Colors.white,
                             filled: true,
