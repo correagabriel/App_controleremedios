@@ -28,7 +28,10 @@ class _ForgetPasswordState extends State<ForgetPassword> {
             child: Text(
               'Digite seu CPF e mandaremos um link ao seu telefone',
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(
+                fontSize: 20,
+                color: Color(0XFF848c9a),
+                ),
             ),
           ),
 
@@ -38,19 +41,21 @@ class _ForgetPasswordState extends State<ForgetPassword> {
 
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
-            child: TextField(
+            child: TextFormField(
               decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.white),
+                fillColor: Colors.white,
+                filled: true,
+                contentPadding: EdgeInsets.fromLTRB(16,8,16,8),
+                border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
-                ),
+                ), 
                 focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.deepPurple),
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(19),
+                  borderSide: const BorderSide(
+                    color:Color(0XFF60468f) ,width: 4
+                  ),
                 ),
                 hintText: 'CPF',
-                fillColor: Colors.grey[200],
-                filled: true,
               ),
             ),
           ),
@@ -64,11 +69,18 @@ class _ForgetPasswordState extends State<ForgetPassword> {
               Navigator.pushNamed(context, 'principal');
             },
             style: OutlinedButton.styleFrom(
-              minimumSize: Size(200, 50),
-              backgroundColor: Colors.deepPurple[200],
+                backgroundColor: Color(0XFFc26ef7),
+                foregroundColor: Colors.white,
+                minimumSize: Size(200, 70),
+                shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15)
+                ),
             ),
             child: Text(
-              'Redefina sua senha'
+              'Redefina sua senha',
+              style: TextStyle(
+                color: Colors.white
+              ),
             ),
           )
         ],

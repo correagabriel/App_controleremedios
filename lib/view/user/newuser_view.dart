@@ -32,21 +32,58 @@ class _NewUserState extends State<NewUser> {
                   height: 130,
                 ),
                 TextField(
+                  maxLength: 11,
                   decoration: InputDecoration(
-                    labelText: 'Nome & Sobrenome',
-                    border: OutlineInputBorder()
-                  ),
+                            fillColor: Colors.white,
+                            filled: true,
+                            contentPadding: EdgeInsets.fromLTRB(16,8,16,8),
+                            border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(19)
+                          ),
+                            labelText: 'Nome & Sobrenome',
+                            enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(19),
+                            borderSide: const BorderSide(color: Color(0XFF60468f))
+                          ),
+                            focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(19),
+                            borderSide: const BorderSide(color:Color(0XFF60468f) ,width: 4)
+                          )
+                          ), 
                 ),
 
                 SizedBox(
-                  height: 25,
+                  height: 15,
                 ),
 
-                TextField(
-                  decoration: InputDecoration(
-                    labelText: 'CPF',
-                    border: OutlineInputBorder()
-                  ),
+                TextFormField(
+                  maxLength: 11,
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Por favor, insira seu email.';
+                    }
+                    if(value.length <11){
+                      return "CPF Invalido";
+                    }
+                    return null;
+                    },
+                    decoration: InputDecoration(
+                    fillColor: Colors.white,
+                            filled: true,
+                            contentPadding: EdgeInsets.fromLTRB(16,8,16,8),
+                            border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(19)
+                          ),
+                            labelText: 'CPF',
+                            enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(19),
+                            borderSide: const BorderSide(color: Color(0XFF60468f))
+                          ),
+                            focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(19),
+                            borderSide: const BorderSide(color:Color(0XFF60468f) ,width: 4)
+                          )
+                          ),
                 ),
 
                 SizedBox(
@@ -86,22 +123,68 @@ class _NewUserState extends State<NewUser> {
                   height: 25,
                 ),
 
-                TextField(
-                  decoration: InputDecoration(
-                    labelText: 'Senha',
-                    border: OutlineInputBorder()
-                  ),
+                TextFormField(
+                  maxLength: 8,
+                    validator: (value) {
+                    if (value == null || value.isEmpty) {
+                              return 'Por favor, insira seu email.';
+                            }
+                            if(value.length <8){
+                              return "CPF Invalido";
+                            }
+                            return null;
+                            },
+                            decoration: InputDecoration(
+                            fillColor: Colors.white,
+                            filled: true,
+                            contentPadding: EdgeInsets.fromLTRB(16,8,16,8),
+                            border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(19)
+                          ),
+                            labelText: 'Senha',
+                            enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(19),
+                            borderSide: const BorderSide(color: Color(0XFF60468f))
+                          ),
+                            focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(19),
+                            borderSide: const BorderSide(color:Color(0XFF60468f) ,width: 4)
+                          )
+                          ),
                 ),
 
                 SizedBox(
-                  height: 25,
+                  height: 15,
                 ),
 
-                TextField(
-                  decoration: InputDecoration(
-                    labelText: 'Repetir Senha',
-                    border: OutlineInputBorder()
-                  ),
+                TextFormField(
+                  maxLength: 11,
+                            validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Por favor, insira seu email.';
+                            }
+                            if(value.length <11){
+                              return "CPF Invalido";
+                            }
+                            return null;
+                            },
+                            decoration: InputDecoration(
+                            fillColor: Colors.white,
+                            filled: true,
+                            contentPadding: EdgeInsets.fromLTRB(16,8,16,8),
+                            border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(19)
+                          ),
+                            labelText: 'CPF',
+                            enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(19),
+                            borderSide: const BorderSide(color: Color(0XFF60468f))
+                          ),
+                            focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(19),
+                            borderSide: const BorderSide(color:Color(0XFF60468f) ,width: 4)
+                          )
+                          ),
                 ),
 
                 SizedBox(
@@ -110,13 +193,13 @@ class _NewUserState extends State<NewUser> {
 
                 OutlinedButton(
                   style: OutlinedButton.styleFrom(
-                    backgroundColor: Colors.grey.shade600,
-                    foregroundColor: Colors.white,
-                    minimumSize: Size(double.infinity, 60),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15)
-                    ),
-                  ),
+                          backgroundColor: Color(0XFFc26ef7),
+                          foregroundColor: Colors.white,
+                          minimumSize: Size(double.infinity, 60),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15)
+                          ),
+                        ),
                   onPressed: () {
                     //
                     // NAVEGAR PARA ROTA
