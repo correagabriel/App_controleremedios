@@ -81,6 +81,7 @@ class _FormsnewpillState extends State<Formsnewpill> {
             
             Text(" QUANTIDADE COMPRIMIDOS : $_pills",
               style: TextStyle(fontSize: 22),
+              
             ),
       
             SizedBox(

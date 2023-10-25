@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class Telaapresentacao extends StatefulWidget {
@@ -15,9 +17,21 @@ class _TelaapresentacaoState extends State<Telaapresentacao> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(child: Image.asset("assets/logo_app_semfundo.png",height: 250,)),
+          //Center(child: Image.asset("assets/logo_app_semfundo.png",height: 250,)),
           SizedBox(
             height: 30,
+          ),
+
+          InkWell(
+            onTap: (){
+              Navigator.pushNamed(context, 'principal');
+            },
+             child: Ink.image(
+                width: 300,
+                height: 200,
+                image: AssetImage("assets/logo_app_semfundo.png"),
+             ),
+
           ),
           
           OutlinedButton(

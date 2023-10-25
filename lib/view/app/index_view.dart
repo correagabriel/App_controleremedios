@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 
-
 class IndexView extends StatefulWidget {
   const IndexView({super.key});
 
@@ -15,6 +14,14 @@ class _IndexViewState extends State<IndexView> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      backgroundColor: Color(0XFF14233c),
+      appBar: AppBar(
+        title: const Text("Sobre o Aplicativo"),
+        centerTitle: true,
+        backgroundColor: Color(0XFF60468f),
+        leading: const BackButton(
+        ),
+      ),
       body: const Column(
         children: <Widget> [
           SizedBox(

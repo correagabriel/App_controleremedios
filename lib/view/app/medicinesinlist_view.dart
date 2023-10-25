@@ -55,7 +55,7 @@ class _MedicinesinlistState extends State<Medicinesinlist> {
               ),
             ),
             Text(
-              lmedicines.qtndMedicamento,
+              lmedicines.dscMedicamento,
               style: TextStyle(
                 fontSize: 20,
                 fontStyle: FontStyle.italic,

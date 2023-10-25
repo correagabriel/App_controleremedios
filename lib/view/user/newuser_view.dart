@@ -13,18 +13,23 @@ class _NewUserState extends State<NewUser> {
   @override
   Widget build(BuildContext context) {
     return Material (
-      
-       child: SizedBox(
-        width: double.infinity,
-        height: double.infinity,
-        child: SizedBox(
-          child: Padding(
+       child: Scaffold(
+        backgroundColor: Color(0XFF14233c),
+        appBar: AppBar(
+          title: const Text("Novo Remédios"),
+          centerTitle: true,
+          backgroundColor: Color(0XFF60468f),
+        ),
+        //width: double.infinity,
+        //height: double.infinity,
+        //child: SizedBox(
+          body: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 SizedBox(
-                  height: 200,
+                  height: 130,
                 ),
                 TextField(
                   decoration: InputDecoration(
@@ -100,7 +105,7 @@ class _NewUserState extends State<NewUser> {
                 ),
 
                 SizedBox(
-                  height: 150,
+                  height: 100,
                 ),
 
                 OutlinedButton(
@@ -123,8 +128,7 @@ class _NewUserState extends State<NewUser> {
               ],
             ), 
           ),
-        ),
-      ),
+        ),  
     );
   }
 }

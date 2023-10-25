@@ -12,7 +12,11 @@ class _ForgetPasswordState extends State<ForgetPassword> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0XFF14233c),
+    
       appBar: AppBar(
+        title: const Text("Esqueceu a Senha"),
+        centerTitle: true,
+        backgroundColor: Color(0XFF60468f),
         leading: const BackButton(
         ),
       ),
