@@ -36,30 +36,35 @@ class _MedicinesinlistState extends State<Medicinesinlist> {
             Text(
               lmedicines.nomeMedicamento,
               style: TextStyle(
-                fontSize: 24,
+                fontSize: 30,
                 fontWeight: FontWeight.bold,
-                color: Color(0XFF60468f),
+                color: Color(0XFF848c9a),
               ),
             ),
             
               SizedBox(
-                height: 11,
+                height: 30,
               ),
 
             Text(
               lmedicines.qtndMedicamento,
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 25,
                 fontStyle: FontStyle.italic,
-                color: Color(0XFF60468f),
+                color: Color(0XFF848c9a),
               ),
             ),
+
+              SizedBox(
+                height: 20,
+              ),
+
             Text(
               lmedicines.dscMedicamento,
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 25,
                 fontStyle: FontStyle.italic,
-                color: Color(0XFF60468f),
+                color: Color(0XFF848c9a),
               ),
             ),
           ],

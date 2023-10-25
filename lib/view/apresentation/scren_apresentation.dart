@@ -17,7 +17,7 @@ class _TelaapresentacaoState extends State<Telaapresentacao> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
-        
+
         children: [
           SizedBox(
             height: 30,
@@ -28,8 +28,8 @@ class _TelaapresentacaoState extends State<Telaapresentacao> {
               Navigator.pushNamed(context, 'principal');
             },
              child: Ink.image(
-                width: 300,
-                height: 200,
+                width: 500,
+                height: 500,
                 image: AssetImage("assets/logo_app_semfundo.png"),
              ),
 

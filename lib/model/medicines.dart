@@ -10,9 +10,9 @@ class tdsRemedios {
     for (int i = 1; i <= 1; i++) {
       lista.add(
         tdsRemedios(
-          'Remédio $i',
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s',
-          '',
+          'Oxalato de Escitalopram',
+          'Antes de toma-lo é necessário comer algo',
+          'Quantidade = 3 ',
         ),
       );
     }

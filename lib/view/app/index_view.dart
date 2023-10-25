@@ -15,6 +15,7 @@ class _IndexViewState extends State<IndexView> {
   Widget build(BuildContext context) {
     return  Scaffold(
       backgroundColor: Color(0XFF14233c),
+      
       appBar: AppBar(
         title: const Text("Sobre o Aplicativo"),
         centerTitle: true,
@@ -32,6 +33,7 @@ class _IndexViewState extends State<IndexView> {
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 30,
+              color: Color(0XFF848c9a),
             ),
           ),
           SizedBox(
@@ -42,6 +44,7 @@ class _IndexViewState extends State<IndexView> {
             'Tema:',
             style: TextStyle(
               fontSize: 20,
+              color: Color(0XFF848c9a),
             ),
           ),
           Text(
@@ -49,6 +52,7 @@ class _IndexViewState extends State<IndexView> {
             'O aplicativo tem como principal função ajudar pessoas idosas ou até mesmo pessoas que convivem com elas, ajudando-as em seu consumo de medicamentos, possuindo ligação entre o aplicativo e porta-remédios eletrônico.',
           style: TextStyle(
               fontSize: 20,
+              color: Color(0XFF848c9a),
             ),
           ),        
           SizedBox(
@@ -59,6 +63,7 @@ class _IndexViewState extends State<IndexView> {
             textAlign: TextAlign.left,
             style: TextStyle(
               fontSize: 20,
+              color: Color(0XFF848c9a),
             ),
           ),
         ],

@@ -23,7 +23,7 @@
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Container(
-                  margin: EdgeInsets.fromLTRB(0, 250, 0, 230),
+                  margin: EdgeInsets.fromLTRB(0, 230, 0, 230),
                   child: Column(
                     children: [
                       TextFormField(
