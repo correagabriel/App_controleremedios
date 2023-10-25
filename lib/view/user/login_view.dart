@@ -10,6 +10,9 @@
   }
 
   class _PrincipalViewState extends State<PrincipalView> {
+
+    final _formKey = GlobalKey<FormState>();
+
     @override
     Widget build(BuildContext context) {
       return Material(
@@ -20,6 +23,8 @@
           body: Padding(
             padding: const EdgeInsets.all(8.0),
             
+          child: Form(
+            key: _formKey,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -31,7 +36,7 @@
                             maxLength: 11,
                             validator: (value) {
                             if (value == null || value.isEmpty) {
-                              return 'Por favor, insira seu email.';
+                              return 'Por favor, insira seu CPF';
                             }
                             if(value.length <11){
                               return "CPF Invalido";
@@ -64,7 +69,7 @@
                             maxLength: 8,
                             validator: (value) {
                             if (value == null || value.isEmpty) {
-                              return 'Por favor, insira seu email.';
+                              return 'Por favor, insira sua senha';
                             }
                             if(value.length <8){
                               return "Senha muita curta";
@@ -140,6 +145,7 @@
                     //
                     // NAVEGAR PARA ROTA
                     //
+                    botaoPrincipalClicado();
                     Navigator.pushNamed(context, 'newuser');
                   },
                   child: Text('NOVO USUÁRIO'),
@@ -148,6 +154,14 @@
             ),
           ),
         ),
+        ),
       );
     }
-  }
+    botaoPrincipalClicado(){
+      if(_formKey.currentState!.validate()){
+        print("Form Valido"); 
+      } else{
+        print("Form Invalido");
+      }
+    }
+}
