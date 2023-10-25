@@ -34,8 +34,8 @@
                     children: [
                       TextFormField(
                             maxLength: 11,
-                            validator: (value) {
-                            if (value == null || value.isEmpty) {
+                            validator: (String? value) {
+                            if (value == null) {
                               return 'Por favor, insira seu CPF';
                             }
                             if(value.length <11){
@@ -67,8 +67,8 @@
 
                       TextFormField(
                             maxLength: 8,
-                            validator: (value) {
-                            if (value == null || value.isEmpty) {
+                            validator: (String? value) {
+                            if (value == null) {
                               return 'Por favor, insira sua senha';
                             }
                             if(value.length <8){
@@ -112,7 +112,7 @@
                           //
                           // NAVEGAR PARA ROTA
                           //
-                          Navigator.pushNamed(context, 'navbar');
+                          botaoPrincipalClicado();
                         },
                         child: Text('ENTRAR'),
                       ),
@@ -145,7 +145,6 @@
                     //
                     // NAVEGAR PARA ROTA
                     //
-                    botaoPrincipalClicado();
                     Navigator.pushNamed(context, 'newuser');
                   },
                   child: Text('NOVO USUÁRIO'),
@@ -159,7 +158,7 @@
     }
     botaoPrincipalClicado(){
       if(_formKey.currentState!.validate()){
-        print("Form Valido"); 
+        Navigator.pushNamed(context, 'navbar'); 
       } else{
         print("Form Invalido");
       }
