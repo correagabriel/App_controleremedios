@@ -23,7 +23,7 @@ class _IndexViewState extends State<IndexView> {
         leading: const BackButton(
         ),
       ),
-      body: const Column(
+      body: Column(
         children: <Widget> [
           SizedBox(
             height: 50,
@@ -56,7 +56,7 @@ class _IndexViewState extends State<IndexView> {
             ),
           ),        
           SizedBox(
-            height: 100,
+            height: 50,
           ),
 	        Text(
             'Desenvolvido por: ',
@@ -66,6 +66,63 @@ class _IndexViewState extends State<IndexView> {
               color: Color(0XFF848c9a),
             ),
           ),
+
+          SizedBox(
+            height: 20,
+          ),
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget> [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(360),
+              child: Image.asset(
+                'correagabriel.jpeg',
+                width: 200,
+                height: 200,
+              ),
+            ),
+                
+            SizedBox(
+              width: 10,
+            ),
+      
+            ClipRRect(
+              borderRadius: BorderRadius.circular(360),
+              child: Image.asset(
+                'testaleonardo.jpeg',
+                width: 200,
+                height: 200,
+              ),
+            ),
+          ],
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget> [
+              Text(
+              	'Gabriel Corrêa',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Color(0XFF848c9a),
+                ),
+            	),
+                
+              SizedBox(
+                width: 100,
+              ),
+      
+              Text(
+              'Leonardo Testa',
+              style: TextStyle(
+                fontSize: 20,
+                color: Color(0XFF848c9a),
+              ),
+            	),
+		        ],
+          ),
+
+        
         ],
       ),
     );
