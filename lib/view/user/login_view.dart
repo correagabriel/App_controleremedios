@@ -22,16 +22,27 @@
           //height: double.infinity,
           body: Padding(
             padding: const EdgeInsets.all(8.0),
-            
           child: Form(
             key: _formKey,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Container(
-                  margin: EdgeInsets.fromLTRB(0, 230, 0, 230),
+                  margin: EdgeInsets.fromLTRB(0, 180, 0, 100),
                   child: Column(
                     children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(360),
+                        child: Image.asset(
+                          'icon1.jpg',
+                          width: 200,
+                          height: 200,
+                        ),
+                      ),
+
+                      SizedBox(
+                        height: 30,
+                      ),
+
                       TextFormField(
                             maxLength: 11,
                             validator: (String? value) {
@@ -66,6 +77,7 @@
                       ),
 
                       TextFormField(
+                        obscureText: true,
                             maxLength: 8,
                             validator: (String? value) {
                             if (value == null) {
@@ -114,7 +126,13 @@
                           //
                           botaoPrincipalClicado();
                         },
-                        child: Text('ENTRAR'),
+                        child: Text(
+                          'ENTRAR',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                          ),
+                        ),
                       ),
 
                       SizedBox(
@@ -127,7 +145,13 @@
                           //
                           Navigator.pushNamed(context, 'forgetpassword');
                       }, 
-                      child: Text('EQUECI A SENHA')
+                      child: Text(
+                        'EQUECI A SENHA',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                        ),
+                      )
                       ),
                     ],
                   ),
@@ -147,7 +171,13 @@
                     //
                     Navigator.pushNamed(context, 'newuser');
                   },
-                  child: Text('NOVO USUÁRIO'),
+                  child: Text(
+                    'NOVO USUÁRIO',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                    ),
+                  ),
                 ),
               ],
             ),

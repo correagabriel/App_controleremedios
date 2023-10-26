@@ -16,7 +16,7 @@ class _NewUserState extends State<NewUser> {
        child: Scaffold(
         backgroundColor: Color(0XFF14233c),
         appBar: AppBar(
-          title: const Text("Novo Remédios"),
+          title: const Text("Novo Usuário"),
           centerTitle: true,
           backgroundColor: Color(0XFF60468f),
         ),
@@ -60,7 +60,7 @@ class _NewUserState extends State<NewUser> {
                   maxLength: 11,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Por favor, insira seu email.';
+                      return 'Por favor, insira seu CPF.';
                     }
                     if(value.length <11){
                       return "CPF Invalido";
@@ -92,13 +92,22 @@ class _NewUserState extends State<NewUser> {
 
                 Row(
                   children: [
-                     Expanded(
+                    Expanded(
                       child: ListTile(
-                      title: Text('Celular'),
+                      title: Text(
+                        'Celular : ',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                          ),
+                      ),
                       subtitle: TextFormField(
                         decoration: const InputDecoration(
+                        fillColor: Colors.white,
+                        filled: true,
+                        contentPadding: EdgeInsets.fromLTRB(16,8,16,8),
                         border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(8))),
+                        borderRadius: BorderRadius.all(Radius.circular(19))),
                         ),
                       ),),
                     ),
@@ -107,11 +116,20 @@ class _NewUserState extends State<NewUser> {
                     ),
                     Expanded(
                       child:ListTile(
-                        title: Text('Numero Emergência'),
+                        title: Text(
+                          'Numero Emergência : ',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                          ),
+                        ),
                         subtitle:  TextFormField(
                           decoration: const InputDecoration(
+                          fillColor: Colors.white,
+                          filled: true,
+                          contentPadding: EdgeInsets.fromLTRB(16,8,16,8),
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(8))),
+                            borderRadius: BorderRadius.all(Radius.circular(19))),
                           ),
                         ),
                       ),
@@ -127,30 +145,30 @@ class _NewUserState extends State<NewUser> {
                   maxLength: 8,
                     validator: (value) {
                     if (value == null || value.isEmpty) {
-                              return 'Por favor, insira seu email.';
-                            }
-                            if(value.length <8){
-                              return "CPF Invalido";
-                            }
-                            return null;
-                            },
-                            decoration: InputDecoration(
-                            fillColor: Colors.white,
-                            filled: true,
-                            contentPadding: EdgeInsets.fromLTRB(16,8,16,8),
-                            border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(19)
-                          ),
-                            labelText: 'Senha',
-                            enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(19),
-                            borderSide: const BorderSide(color: Color(0XFF60468f))
-                          ),
-                            focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(19),
-                            borderSide: const BorderSide(color:Color(0XFF60468f) ,width: 4)
-                          )
-                          ),
+                      return 'Por favor, insira sua senha';
+                    }
+                    if(value.length <8){
+                      return "Senha Invalido";
+                    }
+                    return null;
+                    },
+                    decoration: InputDecoration(
+                      fillColor: Colors.white,
+                      filled: true,
+                      contentPadding: EdgeInsets.fromLTRB(16,8,16,8),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(19)
+                      ),
+                      labelText: 'Senha',
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(19),
+                        borderSide: const BorderSide(color: Color(0XFF60468f))
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(19),
+                        borderSide: const BorderSide(color:Color(0XFF60468f) ,width: 4)
+                      ),
+                    ),
                 ),
 
                 SizedBox(
@@ -159,32 +177,32 @@ class _NewUserState extends State<NewUser> {
 
                 TextFormField(
                   maxLength: 11,
-                            validator: (value) {
-                            if (value == null || value.isEmpty) {
-                              return 'Por favor, insira seu email.';
-                            }
-                            if(value.length <11){
-                              return "CPF Invalido";
-                            }
-                            return null;
-                            },
-                            decoration: InputDecoration(
-                            fillColor: Colors.white,
-                            filled: true,
-                            contentPadding: EdgeInsets.fromLTRB(16,8,16,8),
-                            border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(19)
-                          ),
-                            labelText: 'CPF',
-                            enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(19),
-                            borderSide: const BorderSide(color: Color(0XFF60468f))
-                          ),
-                            focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(19),
-                            borderSide: const BorderSide(color:Color(0XFF60468f) ,width: 4)
-                          )
-                          ),
+                    validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Por favor, insira seu Senha.';
+                    }
+                    if(value.length <11){
+                      return "Senha Invalido";
+                    }
+                    return null;
+                    },
+                    decoration: InputDecoration(
+                      fillColor: Colors.white,
+                      filled: true,
+                      contentPadding: EdgeInsets.fromLTRB(16,8,16,8),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(19)
+                      ),
+                      labelText: 'Repetir Senha',
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(19),
+                        borderSide: const BorderSide(color: Color(0XFF60468f))
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(19),
+                        borderSide: const BorderSide(color:Color(0XFF60468f) ,width: 4)
+                      )
+                    ),
                 ),
 
                 SizedBox(
@@ -193,20 +211,26 @@ class _NewUserState extends State<NewUser> {
 
                 OutlinedButton(
                   style: OutlinedButton.styleFrom(
-                          backgroundColor: Color(0XFFc26ef7),
-                          foregroundColor: Colors.white,
-                          minimumSize: Size(double.infinity, 60),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15)
-                          ),
-                        ),
+                    backgroundColor: Color(0XFFc26ef7),
+                    foregroundColor: Colors.white,
+                    minimumSize: Size(double.infinity, 60),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15)
+                    ),
+                  ),
                   onPressed: () {
                     //
                     // NAVEGAR PARA ROTA
                     //
                     Navigator.pushNamed(context, 'navbar');
                   },
-                    child: Text('ENTRAR'),
+                    child: Text(
+                      'ENTRAR',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                    ),
+                    ),
                 ),
               ],
             ), 

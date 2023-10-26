@@ -29,7 +29,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
               'Digite seu CPF e mandaremos um link ao seu telefone',
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 28,
                 color: Color(0XFF848c9a),
                 ),
             ),
@@ -79,7 +79,8 @@ class _ForgetPasswordState extends State<ForgetPassword> {
             child: Text(
               'Redefina sua senha',
               style: TextStyle(
-                color: Colors.white
+                color: Colors.white,
+                fontSize: 20,
               ),
             ),
           )
